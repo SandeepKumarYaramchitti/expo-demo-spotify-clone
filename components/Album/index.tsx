@@ -1,12 +1,9 @@
 import React from 'react'
 import {View, Image, Text} from 'react-native'
 import styles from './styles'
+import {Album} from '../../types'
 export type AlbumProps = {
-    album: {
-        id: string,
-        imageUrl: string,
-        albumHeadline: string
-    }
+    album: Album
 }
 const album = (props: AlbumProps) => {
     return (
