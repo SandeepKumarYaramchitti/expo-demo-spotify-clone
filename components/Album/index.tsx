@@ -5,7 +5,7 @@ import {Album} from '../../types'
 export type AlbumProps = {
     album: Album
 }
-const album = (props: AlbumProps) => {
+const AlbumComponent = (props: AlbumProps) => {
     return (
         <View style={styles.container}>
             <Image 
@@ -18,4 +18,4 @@ const album = (props: AlbumProps) => {
     )
 }
 
-export default album
+export default AlbumComponent
