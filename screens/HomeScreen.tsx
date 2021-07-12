@@ -3,11 +3,19 @@ import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+import Album from '../components/Album'
+
+const album = {
+  id: '1',
+  imageUrl: 'https://cache.boston.com/resize/bonzai-fba/Globe_Photo/2011/04/14/1302796985_4480/539w.jpg',
+  albumHeadline: 'High on You',
+  // artist: 'Helen',
+}
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home Screen</Text>
+      <Album album={album}></Album>
     </View>
   );
 }
