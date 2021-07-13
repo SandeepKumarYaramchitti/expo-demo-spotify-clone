@@ -9,11 +9,11 @@ const AlbumComponent = (props: AlbumProps) => {
     return (
         <View style={styles.container}>
             <Image 
-                source={{ uri: props.album.imageUrl}}
+                source={{ uri: props.album.imageUri}}
                 style={styles.image}
             > 
             </Image>
-            <Text style={styles.text}>{props.album.albumHeadline}</Text>
+            <Text style={styles.text}>{props.album.artistsHeadline}</Text>
         </View>
     )
 }
