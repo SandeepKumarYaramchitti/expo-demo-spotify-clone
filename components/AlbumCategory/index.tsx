@@ -11,7 +11,7 @@ export type AlbumCategory = {
 
 const AlbumCategory = (props: AlbumCategory) => {
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={styles.title}>{props.title}</Text>
             <FlatList
                 data={props.albums}

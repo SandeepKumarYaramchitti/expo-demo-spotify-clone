@@ -2,18 +2,17 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
-        width: 200,
+        width: 165,
         margin: 10
     }, 
     image: {
         width: '100%',
-        height: 200
+        height: 165
     },
     text: {
-        marginTop: '2px',
         color: 'grey',
-        fontSize: 18,
-        fontWeight: 'bold'
+        marginTop: 10,
+        fontSize: 16
     }
 });
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -30,9 +30,12 @@ const albumCategory = {
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <AlbumCategory title={albumCategory.title} albums={albumCategory.albums}></AlbumCategory>
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
+        <View style={styles.container}>
+          <AlbumCategory title={albumCategory.title} albums={albumCategory.albums}></AlbumCategory>
+        </View>
+    </SafeAreaView>
+
   );
 }
 
