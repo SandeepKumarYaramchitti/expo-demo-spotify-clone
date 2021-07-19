@@ -28,21 +28,21 @@ export default function BottomTabNavigator() {
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
         name="Home"
-        component={HomeScreen}
+        component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => <Entypo name="home" size={30} color={color} style={{ marginBottom: -3 }} />,
         }}
       />
       <BottomTab.Screen
         name="Search"
-        component={SearchScreen}
+        component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} color={color} style={{ marginBottom: -3 }} />,
         }}
       />
       <BottomTab.Screen
         name="Music"
-        component={MusicLibraryScreen}
+        component={TabTwoNavigator}
         options={{
         tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={30} color={color} style={{ marginBottom: -3 }} />,
         }}
@@ -73,13 +73,13 @@ function TabOneNavigator() {
     <TabOneStack.Navigator>
       <TabOneStack.Screen
         name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+        component={HomeScreen}
+        options={{ headerTitle: 'Home' }}
       />
       <TabOneStack.Screen
         name="AlbumScreen"
         component={AlbumScreen}
-        options={{ headerTitle: 'Albumscreen' }}
+        options={{ headerTitle: 'Album Screen' }}
       />
 
     </TabOneStack.Navigator>
