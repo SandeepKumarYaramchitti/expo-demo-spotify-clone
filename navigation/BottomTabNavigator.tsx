@@ -15,6 +15,7 @@ import SearchScreen from '../screens/SearchScreen'
 import TabTwoScreen from '../screens/TabTwoScreen';
 import MusicLibraryScreen from '../screens/MusicLibraryScreen'
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import AlbumScreen from '../screens/AlbumScreen';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -75,6 +76,12 @@ function TabOneNavigator() {
         component={TabOneScreen}
         options={{ headerTitle: 'Tab One Title' }}
       />
+      <TabOneStack.Screen
+        name="AlbumScreen"
+        component={AlbumScreen}
+        options={{ headerTitle: 'Albumscreen' }}
+      />
+
     </TabOneStack.Navigator>
   );
 }
