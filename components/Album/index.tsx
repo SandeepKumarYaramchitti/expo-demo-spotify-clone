@@ -1,5 +1,6 @@
 import React from 'react'
 import {View, Image, Text, TouchableNativeFeedback} from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import styles from './styles'
 import {Album} from '../../types'
 export type AlbumProps = {
@@ -7,8 +8,10 @@ export type AlbumProps = {
 }
 const AlbumComponent = (props: AlbumProps) => {
 
+    const navigation = useNavigation();
     const onPress = () => {
-        console.warn(`Album has been clicked ${props.album.artistsHeadline}`)
+        // console.warn(`Album has been clicked ${props.album.artistsHeadline}`)
+        navigation.navigate('AlbumScreen', {id: props.album.id})
     }
     return (
         <TouchableNativeFeedback onPress={onPress}>

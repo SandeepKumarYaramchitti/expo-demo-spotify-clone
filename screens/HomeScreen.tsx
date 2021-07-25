@@ -8,8 +8,9 @@ import albumCategories from '../data/albumCategories'
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
+    
         <View style={styles.container}>
+          
           {/* <AlbumCategory title={albumCategory.title} albums={albumCategory.albums}></AlbumCategory> */}
           {/* Lets add a flat list to render album categories in a verticle list items */}
           <FlatList
@@ -19,7 +20,7 @@ export default function HomeScreen() {
                 showsVerticalScrollIndicator={false}
           />
         </View>
-    </SafeAreaView>
+    
 
   );
 }
