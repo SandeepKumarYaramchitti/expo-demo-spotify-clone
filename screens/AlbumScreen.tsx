@@ -8,8 +8,8 @@ const album = {
     name: 'Good Vibes',
     by: 'Spotify',
     numberOfLikes: 38,
-    imageUri: '',
-    artistHeadline: '',
+    imageUri: 'https://raw.githubusercontent.com/SandeepKumarYaramchitti/expo-demo-spotify-clone/main/data/songs-header.jpg',
+    artistHeadline: 'Lorem  ipsum',
     songs: [
         {
             id: '1',
@@ -22,6 +22,12 @@ const album = {
             imageUri: 'https://cdn6.f-cdn.com/contestentries/1485199/27006121/5ca3e39ced7f1_thumb900.jpg',
             title: 'Hello from other',
             artist: 'Adele'
+        },
+        {
+            id: '3',
+            imageUri: 'https://cdn6.f-cdn.com/contestentries/1485199/27006121/5ca3e39ced7f1_thumb900.jpg',
+            title: 'Lorem Ipsum',
+            artist: 'Drake'
         }
     ]
 }
