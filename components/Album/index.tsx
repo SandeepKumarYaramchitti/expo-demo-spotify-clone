@@ -11,7 +11,7 @@ const AlbumComponent = (props: AlbumProps) => {
     const navigation = useNavigation();
     const onPress = () => {
         // console.warn(`Album has been clicked ${props.album.artistsHeadline}`)
-        navigation.navigate('AlbumScreen')
+        navigation.navigate('AlbumScreen', {id: props.album.id})
     }
     return (
         <TouchableNativeFeedback onPress={onPress}>
