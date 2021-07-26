@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 
 import {View, Text} from 'react-native';
 import { useRoute} from '@react-navigation/native'
+import SongListItem from '../components/SongsLIstItem'
 
 const album = {
     id: '11',
@@ -36,13 +37,13 @@ const AlbumScreen = () => {
 
     const route = useRoute();
     useEffect(() => {
-        console.warn('Route Information', route);
+        
     }, [])
 
     return (
         <>
             <View>
-                <Text style={{color: 'white'}}>Hello, From Album screen</Text>
+                <SongListItem song={album.songs[0]} />
             </View>
         </>
     )
