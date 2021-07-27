@@ -3,6 +3,7 @@ import React, {useEffect} from "react";
 import {View, Text, FlatList} from 'react-native';
 import { useRoute} from '@react-navigation/native'
 import SongListItem from '../components/SongsLIstItem'
+import AlbumHeader from '../components/AlbumHeader'
 
 const album = {
     id: '11',
@@ -49,7 +50,8 @@ const AlbumScreen = () => {
                 <FlatList
                     data={album.songs}
                     renderItem={({item}) => <SongListItem song={item} />} 
-                    keyExtractor={item => item.id}    
+                    keyExtractor={item => item.id}
+                    ListHeaderComponent={() => <AlbumHeader album={album} />}    
                 />
             </View>
         </>
