@@ -13,6 +13,7 @@ export default function App() {
 
   const song = {
     id: '1',
+    uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     imageUri: 'https://cache.boston.com/resize/bonzai-fba/Globe_Photo/2011/04/14/1302796985_4480/539w.jpg',
     title: 'Post Malone',
     artist: 'Drake, Eminem'

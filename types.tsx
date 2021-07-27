@@ -36,4 +36,5 @@ export type Song = {
   imageUri: string;
   title: string;
   artist: string;
+  uri: string;
 }
