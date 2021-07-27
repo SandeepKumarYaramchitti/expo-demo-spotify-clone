@@ -35,12 +35,12 @@ const Styles = StyleSheet.create({
     title: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 14,
         margin: 10
     },
     artist: {
         color: 'grey',
-        fontSize: 14
+        fontSize: 12
     }
 });
 

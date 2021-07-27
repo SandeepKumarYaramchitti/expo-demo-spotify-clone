@@ -14,14 +14,17 @@ const PlayWidget = ( props: PlayWidgetProp) => {
     return (
         <View style={Styles.container}>
             <Image source={{ uri: song.imageUri }} style={Styles.image} />
-            <View style={Styles.nameContainer}>
-                <Text style={Styles.title}>{song.title}</Text>
-                <Text style={Styles.artist}>{song.artist}</Text>
+            <View style={Styles.rightContainer}>
+                <View style={Styles.nameContainer}>
+                    <Text style={Styles.title}>{song.title}</Text>
+                    <Text style={Styles.artist}>{song.artist}</Text>
+                </View>
+                <View style={Styles.iconsContainer}>
+                    <AntDesign name="hearto" size={20} color={'white'} />
+                    <FontAwesome name="play" size={20} color={'white'} />
+                </View>
             </View>
-            <View style={Styles.iconsContainer}>
-                <AntDesign name="hearto" size={30} color={'white'} />
-                <FontAwesome name="play" size={30} color={'white'} />
-            </View>
+
 
 
         </View>
