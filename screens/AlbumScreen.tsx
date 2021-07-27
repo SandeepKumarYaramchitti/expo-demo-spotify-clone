@@ -1,15 +1,17 @@
 import React, {useEffect} from "react";
 
-import {View, Text} from 'react-native';
+import {View, Text, FlatList} from 'react-native';
 import { useRoute} from '@react-navigation/native'
+import SongListItem from '../components/SongsLIstItem'
+import AlbumHeader from '../components/AlbumHeader'
 
 const album = {
     id: '11',
     name: 'Good Vibes',
     by: 'Spotify',
     numberOfLikes: 38,
-    imageUri: '',
-    artistHeadline: '',
+    imageUri: 'https://raw.githubusercontent.com/SandeepKumarYaramchitti/expo-demo-spotify-clone/main/data/songs-header.jpg',
+    artistHeadline: 'Lorem  ipsum',
     songs: [
         {
             id: '1',
@@ -22,6 +24,12 @@ const album = {
             imageUri: 'https://cdn6.f-cdn.com/contestentries/1485199/27006121/5ca3e39ced7f1_thumb900.jpg',
             title: 'Hello from other',
             artist: 'Adele'
+        },
+        {
+            id: '3',
+            imageUri: 'https://cdn6.f-cdn.com/contestentries/1485199/27006121/5ca3e39ced7f1_thumb900.jpg',
+            title: 'Lorem Ipsum',
+            artist: 'Drake'
         }
     ]
 }
@@ -30,13 +38,21 @@ const AlbumScreen = () => {
 
     const route = useRoute();
     useEffect(() => {
-        console.warn('Route Information', route);
+        
     }, [])
+  
+
 
     return (
         <>
             <View>
-                <Text style={{color: 'white'}}>Hello, From Album screen</Text>
+                {/* <SongListItem song={album.songs[0]} /> */}
+                <FlatList
+                    data={album.songs}
+                    renderItem={({item}) => <SongListItem song={item} />} 
+                    keyExtractor={item => item.id}
+                    ListHeaderComponent={() => <AlbumHeader album={album} />}    
+                />
             </View>
         </>
     )
