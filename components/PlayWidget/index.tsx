@@ -12,7 +12,7 @@ export type PlayWidgetProp = {
 const PlayWidget = ( props: PlayWidgetProp) => {
     const { song } = props;
 
-    const onPlayStatusUpdate = (status) => {
+    const onPlayStatusUpdate = (status: any) => {
         console.warn(status)
     }
 
